@@ -5,7 +5,22 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "prop-types": "15.x",
+    "redux": "3.x",
+    "react-redux": "5.x",
+    "redux-responsive": "4.x"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "material-ui": "^0.20.0",
+    "nwb": "^0.20.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "5.x",
+    "redux": "3.x",
+    "redux-responsive": "^4.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
