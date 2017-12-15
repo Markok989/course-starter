@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { toggleDrawerOpen } from '../../actions/actionsDrawer';
 import isResponsiveAndOverBreakPoint from '../common/selectors';
 
 class BodyContainer extends Component {

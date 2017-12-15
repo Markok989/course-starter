@@ -1,10 +1,12 @@
 import { responsiveStateReducer } from 'redux-responsive';
 import { combineReducers } from 'redux';
-import reducer from './drawerReducer';
+import drawer from './drawerReducer';
+import chapters from './chapterReducer';
 
 const rootReducer = combineReducers({
     browser: responsiveStateReducer,
-    responsiveDrawer: reducer
+    responsiveDrawer: drawer,
+    chapters
 });
 
 export default rootReducer;

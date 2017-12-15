@@ -9,18 +9,15 @@ import {
   setResponsive
 } from './components/Drawer/index';
 import RaisedButton from 'material-ui/RaisedButton'
-import FlatButton from 'material-ui/FlatButton'
 import Toggle from 'material-ui/Toggle'
 import { connect } from 'react-redux'
-import FontIcon from 'material-ui/FontIcon'
-import SvgIcon from 'material-ui/SvgIcon'
-import IconButton from 'material-ui/IconButton'
-import ListItem from './components/Drawer/ListItem';
+import ListItem from './components/List/ListItem';
 
 const styles = {
   drawer_container: {
     backgroundColor: "Lavender",
-    height: '100%'
+    minHeight: '100%',
+    maxHeight: '140%'
   },
   drawer_header: {
     margin: '0px',

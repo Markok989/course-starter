@@ -1,21 +1,81 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import { Provider } from 'react-redux';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import configureStore from './store/configureStore';
 
-import { loadChaptersSuccess } from './actions/chapterActions'
+import delay from './delay';
+/*
+class ChapterApi {
 
-//import { ChapterApi } from './api/mockChaptersApi'
-//import chapters from './api/mockChaptersApi';
+    static getAllChapters() {
+      /*  return [
+            {
+                // 1
+                "id": "_uosfpm4cn",
+                "chapterName": "Chapter 1",
+                "lessons": [
+                    {
+                        // 2
+                        "id": "_go2o9zllu",
+                        "label": "Lesson1",
+                        "content": ""
+                    },
+                    {
+                        "id": "_5fok3c5qu",
+                        "label": "Lesson2",
+                        "content": ""
+                    },
+                    {
+                        "id": "_xgipqeuom",
+                        "label": "Lesson3",
+                        "content": ""
+                    },
+                    {
+                        "id": "_xgtpqeuom",
+                        "label": "Lesson4",
+                        "content": ""
+                    }
+                ]
+            },
+            {
+                "id": "_uosfpm3cn",
+                "chapterName": "Chapter 2",
+                "lessons": [
+                    {
+                        "id": "_go2o9zl2u",
+                        "label": "Lesson5",
+                        "content": ""
+                    },
+                    {
+                        "lessonId": "_uosfpm2cn",
+                        "id": "_5fok3c6qu",
+                        "label": "Lesson6",
+                        "content": ""
+                    },
+                    {
+                        "id": "_xgipqouom",
+                        "label": "Lesson7",
+                        "content": ""
+                    },
+                    {
+                        "id": "_xgtpqpuom",
+                        "label": "Lesson7",
+                        "content": ""
+                    }
+                ]
+            }
+        ];
+*/
 
-import { loadChapters } from './actions/chapterActions'
+// new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(Object.assign([], chapters));
+//     }, delay);
+// });
+/*
+  }
 
+}
 
-const store = configureStore();
+export default ChapterApi;
+*/
+
 
 const chapters = [
     {
@@ -131,14 +191,14 @@ const chapters = [
 
 
 
-store.dispatch(loadChaptersSuccess(chapters));
-console.log(loadChapters()());
+class ChapterApi {
+    static getAllChapters() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(Object.assign([], chapters));
+            }, delay);
+        });
+    }
+}
 
-//loadChapters()
-ReactDOM.render(
-    <Provider store={store}>
-        <MuiThemeProvider>
-            <App />
-        </MuiThemeProvider>
-    </Provider>, document.getElementById('root'));
-registerServiceWorker();
+export default ChapterApi;

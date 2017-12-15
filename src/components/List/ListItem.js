@@ -3,10 +3,11 @@ import React from 'react';
 import { List, ListItem } from 'material-ui/List';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
-import ContentDrafts from 'material-ui/svg-icons/content/drafts';
-import ContentSend from 'material-ui/svg-icons/content/send';
 import Subheader from 'material-ui/Subheader';
-import Toggle from 'material-ui/Toggle';
+import ListItemList from './ListItemList';
+
+import { connect } from 'react-redux';
+import * as chapterActions from '../../actions/chapterActions';
 
 class ListNested extends React.Component {
 
@@ -27,27 +28,17 @@ class ListNested extends React.Component {
     };
 
     render() {
+
+        const { chapters } = this.props;
+
         return (
             <div>
-                
+
                 <br />
                 <div>
                     <List>
                         <Subheader>Nested List Items</Subheader>
-                       
-                        <ListItem
-                            primaryText="Inbox"
-                            leftIcon={<ContentInbox />}
-                            initiallyOpen={true}
-                            primaryTogglesNestedList={true}
-                            nestedItems={[
-                                <ListItem
-                                    key={1}
-                                    primaryText="Starred"
-                                    leftIcon={<ActionGrade />}
-                                />,                               
-                            ]}
-                        />
+                        <ListItemList chapters={chapters} />
                     </List>
                 </div>
             </div>
@@ -55,4 +46,15 @@ class ListNested extends React.Component {
     }
 }
 
-export default ListNested;
+
+
+function mapStateToProps(state, ownProps) {
+    console.log('state', state);
+    return {
+        chapters: state.chapters
+    };
+}
+
+
+
+export default connect(mapStateToProps)(ListNested);

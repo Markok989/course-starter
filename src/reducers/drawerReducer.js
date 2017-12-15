@@ -28,8 +28,7 @@ const responsiveDrawer = (state = initialState, action) => {
                 responsive: action.responsive
             }
 
-        default:
-            return state
+        default: return state
     }
 }
 
