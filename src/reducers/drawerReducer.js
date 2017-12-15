@@ -1,11 +1,6 @@
-import * as types from './types'
+import * as types from '../actions/actionTypes';
+import initialState from './initialState';
 
-const initialState = {
-    docked: false,
-    responsive: true,
-    open: false,
-    searching: false
-}
 
 const responsiveDrawer = (state = initialState, action) => {
     switch (action.type) {
@@ -38,4 +33,4 @@ const responsiveDrawer = (state = initialState, action) => {
     }
 }
 
-export default responsiveDrawer
+export default responsiveDrawer;

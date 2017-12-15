@@ -7,7 +7,7 @@ import {
   toggleDrawerOpen,
   toggleDrawerDock,
   setResponsive
-} from './components/index';
+} from './components/Drawer/index';
 import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import Toggle from 'material-ui/Toggle'
@@ -15,10 +15,11 @@ import { connect } from 'react-redux'
 import FontIcon from 'material-ui/FontIcon'
 import SvgIcon from 'material-ui/SvgIcon'
 import IconButton from 'material-ui/IconButton'
+import ListItem from './components/Drawer/ListItem';
 
 const styles = {
   drawer_container: {
-    backgroundColor: 'grey',
+    backgroundColor: "Lavender",
     height: '100%'
   },
   drawer_header: {
@@ -61,6 +62,7 @@ class App extends Component {
                   primary
                   onClick={toggleDrawerOpen}
                 />
+                <ListItem />
               </div>
             </div>
           </ResponsiveDrawer>
@@ -69,18 +71,18 @@ class App extends Component {
               title={'Responsive Material-UI Drawer'}
               iconElementRight={
                 <Toggle
-                label={responsiveDrawer.responsive ? 'Disable responsive' : 'Enable responsive'}
-                labelPosition='right'
-                style={styles.responsive_toggler}
-                toggled={responsiveDrawer.responsive}
-                onToggle={() => { setResponsive(!responsiveDrawer.responsive) }}
-              />
+                  label={responsiveDrawer.responsive ? 'Disable responsive' : 'Enable responsive'}
+                  labelPosition='right'
+                  style={styles.responsive_toggler}
+                  toggled={responsiveDrawer.responsive}
+                  onToggle={() => { setResponsive(!responsiveDrawer.responsive) }}
+                />
               }
             />
             <h1>test</h1>
             <div style={{ margin: '10px' }}>
               <h1 style={styles.body_header}>Body</h1>
-            
+
             </div>
           </BodyContainer>
         </div>

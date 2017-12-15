@@ -1,6 +1,6 @@
 import expect from 'expect'
-import reducer from './reducer'
-import * as actions from './actions'
+import reducer from './drawerReducer'
+import * as actions from '../actions/actionsDrawer'
 
 const initialState = {
     docked: false,
@@ -9,7 +9,7 @@ const initialState = {
     searching: false
 }
 
-describe('locale reducer', () => {
+describe('locale reducers', () => {
     it('should return the initial state', () => {
         expect(
             reducer(undefined, {})

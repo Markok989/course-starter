@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { toggleDrawerOpen } from '../store/actions'
+import { toggleDrawerOpen } from '../../actions/actionsDrawer'
 import Drawer from 'material-ui/Drawer'
-import isResponsiveAndOverBreakPoint from '../store/selectors'
+import isResponsiveAndOverBreakPoint from '../common/selectors'
 
 class ResponsiveDrawer extends Component {
     render() {
