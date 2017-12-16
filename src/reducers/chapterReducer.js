@@ -17,6 +17,5 @@ export default function chaptersReducer(state = initialState.chapters, action) {
 
         // vraca se state
         default: return state;
-        console.log("brate", state)
     }
 }
