@@ -4,11 +4,13 @@ import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { responsiveStoreEnhancer } from 'redux-responsive';
+import { connectRouter, routerMiddleware } from 'connected-react-router'
+import { createBrowserHistory } from 'history'
 
-export default function configureStore(initialState) {
+export default function configureStore(history) {
     return createStore(
-        rootReducer,
+        connectRouter(history)(rootReducer),
         responsiveStoreEnhancer,
-        applyMiddleware(thunk)
+        applyMiddleware(thunk, routerMiddleware(history))
     );
 }
