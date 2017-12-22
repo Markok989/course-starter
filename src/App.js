@@ -12,6 +12,9 @@ import RaisedButton from 'material-ui/RaisedButton'
 import Toggle from 'material-ui/Toggle'
 import { connect } from 'react-redux'
 import ListItem from './components/List/ListItem';
+import { ConnectedRouter } from 'connected-react-router';
+import routes from './router';
+import { withRouter } from 'react-router-dom';
 
 const styles = {
   drawer_container: {
@@ -79,7 +82,7 @@ class App extends Component {
             <h1>test</h1>
             <div style={{ margin: '10px' }}>
               <h1 style={styles.body_header}>Body</h1>
-
+              {routes}
             </div>
           </BodyContainer>
         </div>
@@ -116,4 +119,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
