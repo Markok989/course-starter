@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 import ListItemRow from './ListItemRow';
 
 const ListItemList = ({ chapters }) => {
-    console.log('test', chapters)
+   // console.log('test', chapters)
     return (
         <div>
             {

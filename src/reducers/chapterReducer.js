@@ -1,6 +1,5 @@
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
-import { stat } from 'fs';
 
 export default function chaptersReducer(state = initialState.chapters, action) {
 

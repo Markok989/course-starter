@@ -49,7 +49,7 @@ class ListNested extends React.Component {
 
 
 function mapStateToProps(state, ownProps) {
-    console.log('state', state);
+  //console.log('LISTA', state);
     return {
         chapters: state.chapters
     };

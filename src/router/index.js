@@ -1,18 +1,17 @@
 
-import React from 'react'
-import { Route, Switch } from 'react-router'
-import Home from '../components/Home'
-import NavBar from '../components/NavBar'
-import Hello from '../components/Hello'
+import React from 'react';
+import { Route, Switch } from 'react-router';
+import App from '../App';
+import LessonPage from '../components/LessonPage/LessonPage';
 
 const routes = (
   <div>
-    <NavBar />
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/hello" component={Hello} />
+      <Route exact path="/" component={App} />
+      <Route path="/lesson" component={LessonPage} />
+      <Route path="/lesson/:id" component={LessonPage} />
     </Switch>
   </div>
 )
 
-export default routes
+export default routes;

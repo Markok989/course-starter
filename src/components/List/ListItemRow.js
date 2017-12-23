@@ -4,7 +4,7 @@ import { List, ListItem } from 'material-ui/List';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import Toggle from 'material-ui/Toggle';
-import NestedList from './NestedList';
+import { Link } from 'react-router-dom';
 
 const ListItemRow = ({ chapter }) => {
     return (
@@ -15,13 +15,15 @@ const ListItemRow = ({ chapter }) => {
             primaryTogglesNestedList={true}
             nestedItems={
                 [
-                    chapter.lessons.map((ch) => {
+                    chapter.lessons.map((lesson) => {
                         return (
-                            < ListItem
-                                key={ch.id}
-                                primaryText={ch.label}
-                                leftIcon={< ActionGrade />}
-                            />
+                            <Link to={"/lesson/" + chapter.id + "-" + lesson.id}>
+                                <ListItem 
+                                    key={lesson.id}
+                                    primaryText={lesson.label}
+                                    leftIcon={< ActionGrade />}
+                                />
+                            </Link>
                         );
                     })
                 ]

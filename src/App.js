@@ -16,6 +16,9 @@ import { ConnectedRouter } from 'connected-react-router';
 import routes from './router';
 import { withRouter } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+
+
 const styles = {
   drawer_container: {
     backgroundColor: "Lavender",
@@ -62,9 +65,11 @@ class App extends Component {
             </div>
           </ResponsiveDrawer>
           <BodyContainer openSecondary={false}>
-            <ResponsiveAppBar
-              title={'Responsive Material-UI Drawer'}
-            />
+            <Link to="/">
+              <ResponsiveAppBar
+                title={'Responsive Material-UI Drawer'}
+              />
+            </Link>
             <h1>test</h1>
             <div style={{ margin: '10px' }}>
               <h1 style={styles.body_header}>Body</h1>
