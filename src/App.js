@@ -57,11 +57,6 @@ class App extends Component {
             <div style={styles.drawer_container}>
               <div style={styles.drawer_header_container}>
                 <h1 style={styles.drawer_header}>Drawer</h1>
-                <RaisedButton
-                  label={responsiveDrawer.open ? 'Close drawer' : 'Open drawer'}
-                  primary
-                  onClick={toggleDrawerOpen}
-                />
                 <ListItem />
               </div>
             </div>
@@ -69,15 +64,6 @@ class App extends Component {
           <BodyContainer openSecondary={false}>
             <ResponsiveAppBar
               title={'Responsive Material-UI Drawer'}
-              iconElementRight={
-                <Toggle
-                  label={responsiveDrawer.responsive ? 'Disable responsive' : 'Enable responsive'}
-                  labelPosition='right'
-                  style={styles.responsive_toggler}
-                  toggled={responsiveDrawer.responsive}
-                  onToggle={() => { setResponsive(!responsiveDrawer.responsive) }}
-                />
-              }
             />
             <h1>test</h1>
             <div style={{ margin: '10px' }}>

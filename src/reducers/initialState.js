@@ -1,7 +1,7 @@
 
 export default {
     docked: false,
-    responsive: true,
+    responsive: false,
     open: false,
     searching: false,
     chapters: []
