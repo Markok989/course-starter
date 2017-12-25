@@ -23,7 +23,7 @@ const styles = {
   drawer_container: {
     backgroundColor: "Lavender",
     minHeight: '100%',
-    maxHeight: '140%'
+    maxHeight: '1000%'
   },
   drawer_header: {
     margin: '0px',

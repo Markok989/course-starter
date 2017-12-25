@@ -4,5 +4,8 @@ export default {
     responsive: false,
     open: false,
     searching: false,
-    chapters: []
+    chapters: [],
+    lessons: [],
+    ajaxCallsInProgress: 0,
+    lists: []
 }

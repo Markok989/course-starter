@@ -17,6 +17,14 @@ export function createChapterSuccess(chapter) {
     };
 }
 
+
+export function removeChapterSuccess(chapter) {
+    return {
+        type: types.REMOVE_CHAPTER_SUCCESS, chapter
+    };
+}
+
+
 // akcija za azuriranje chaptra
 export function updateChapterSuccess(chapter) {
     return {
@@ -25,7 +33,7 @@ export function updateChapterSuccess(chapter) {
 }
 
 export function loadChapters() {
-    
+
     return function (dispatch) {
         return chaptersApi.getAllChapters().then(chapters => {
             dispatch(loadChaptersSuccess(chapters));

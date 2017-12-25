@@ -1,81 +1,5 @@
 
 import delay from './delay';
-/*
-class ChapterApi {
-
-    static getAllChapters() {
-      /*  return [
-            {
-                // 1
-                "id": "_uosfpm4cn",
-                "chapterName": "Chapter 1",
-                "lessons": [
-                    {
-                        // 2
-                        "id": "_go2o9zllu",
-                        "label": "Lesson1",
-                        "content": ""
-                    },
-                    {
-                        "id": "_5fok3c5qu",
-                        "label": "Lesson2",
-                        "content": ""
-                    },
-                    {
-                        "id": "_xgipqeuom",
-                        "label": "Lesson3",
-                        "content": ""
-                    },
-                    {
-                        "id": "_xgtpqeuom",
-                        "label": "Lesson4",
-                        "content": ""
-                    }
-                ]
-            },
-            {
-                "id": "_uosfpm3cn",
-                "chapterName": "Chapter 2",
-                "lessons": [
-                    {
-                        "id": "_go2o9zl2u",
-                        "label": "Lesson5",
-                        "content": ""
-                    },
-                    {
-                        "lessonId": "_uosfpm2cn",
-                        "id": "_5fok3c6qu",
-                        "label": "Lesson6",
-                        "content": ""
-                    },
-                    {
-                        "id": "_xgipqouom",
-                        "label": "Lesson7",
-                        "content": ""
-                    },
-                    {
-                        "id": "_xgtpqpuom",
-                        "label": "Lesson7",
-                        "content": ""
-                    }
-                ]
-            }
-        ];
-*/
-
-// new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve(Object.assign([], chapters));
-//     }, delay);
-// });
-/*
-  }
-
-}
-
-export default ChapterApi;
-*/
-
 
 const chapters = [
     {
@@ -86,25 +10,25 @@ const chapters = [
             {
                 // 2
                 "id": "go2o9zllu",
-                "chapter_id": "uosfpm4cn",
+                "chapterId": "uosfpm4cn",
                 "label": "Lesson 1",
                 "content": "Lekcija 1"
             },
             {
                 "id": "5fok3c5qu",
-                "chapter_id": "uosfpm4cn",
+                "chapterId": "uosfpm4cn",
                 "label": "Lesson 2",
                 "content": "Lekcija 2"
             },
             {
                 "id": "xgipqeuom",
-                "chapter_id": "uosfpm4cn",
+                "chapterId": "uosfpm4cn",
                 "label": "Lesson 3",
                 "content": "Lekcija 3"
             },
             {
                 "id": "xgtpqeuom",
-                "chapter_id": "uosfpm4cn",
+                "chapterId": "uosfpm4cn",
                 "label": "Lesson 4",
                 "content": "Lekcija 4"
             }
@@ -116,25 +40,25 @@ const chapters = [
         "lessons": [
             {
                 "id": "go2o9zl2u",
-                "chapter_id": "uosfpm3cn",
+                "chapterId": "uosfpm3cn",
                 "label": "Lesson 5",
                 "content": "Lekcija 5"
             },
             {
-                "chapter_id": "uosfpm3cn",
+                "chapterId": "uosfpm3cn",
                 "id": "5fok3c6qu",
                 "label": "Lesson 6",
                 "content": "Lekcija 6"
             },
             {
                 "id": "xgipqouom",
-                "chapter_id": "uosfpm3cn",
+                "chapterId": "uosfpm3cn",
                 "label": "Lesson 7",
                 "content": "Lekcija 7"
             },
             {
                 "id": "xgtpqpuom",
-                "chapter_id": "uosfpm3cn",
+                "chapterId": "uosfpm3cn",
                 "label": "Lesson 8",
                 "content": "Lekcija 8"
             }
@@ -146,24 +70,24 @@ const chapters = [
         "lessons": [
             {
                 "id": "go2o9zl2u",
-                "chapter_id": "uosfpm6cn",
+                "chapterId": "uosfpm6cn",
                 "label": "Lesson 9",
                 "content": "Lekcija 9"
             },
             {
-                "chapter_id": "uosfpm6cn",
+                "chapterId": "uosfpm6cn",
                 "id": "_5fok3c6qu",
                 "label": "Lesson 10",
                 "content": "Lekcija 10"
             },
             {
-                "chapter_id": "uosfpm6cn",
+                "chapterId": "uosfpm6cn",
                 "id": "xgipqouom",
                 "label": "Lesson 11",
                 "content": "Lekcija 11"
             },
             {
-                "chapter_id": "uosfpm6cn",
+                "chapterId": "uosfpm6cn",
                 "id": "_xgtpqpuom",
                 "label": "Lesson 12",
                 "content": "Lekcija 12"
@@ -176,25 +100,25 @@ const chapters = [
         "lessons": [
             {
                 "id": "go2o9zl2u",
-                "chapter_id": "uosfpm8cn",
+                "chapterId": "uosfpm8cn",
                 "label": "Lesson 13",
                 "content": "Lekcija 13"
             },
             {
-                "chapter_id": "uosfpm8cn",
+                "chapterId": "uosfpm8cn",
                 "id": "5fok3c6qu",
                 "label": "Lesson 14",
                 "content": "Lekcija 14"
             },
             {
                 "id": "xgipqouom",
-                "chapter_id": "uosfpm8cn",
+                "chapterId": "uosfpm8cn",
                 "label": "Lesson 15",
                 "content": "Lekcija 15"
             },
             {
                 "id": "xgtpqpuom",
-                "chapter_id": "uosfpm8cn",
+                "chapterId": "uosfpm8cn",
                 "label": "Lesson 16",
                 "content": "Lekcija 16"
             }
@@ -204,11 +128,27 @@ const chapters = [
 
 
 
+
+
 class ChapterApi {
     static getAllChapters() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(Object.assign([], chapters));
+            }, delay);
+        });
+    }
+
+    static saveChapter(chapter) {
+        chapter = Object.assign({}, chapter);
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const minChapterNameLength = 3;
+                if (chapter.chapterName.length < minChapterNameLength) {
+                    reject(`Title must be at least ${minChapterNameLength} characters.`);
+                }
+                chapters.push(chapter);
+                resolve(chapter);
             }, delay);
         });
     }
